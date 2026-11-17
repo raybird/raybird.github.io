@@ -1,0 +1,162 @@
+:root {
+  color-scheme: light;
+  --background: #faf9f6;
+  --text: #292d2b;
+  --muted: #606761;
+  --accent: #28604b;
+  --surface: #edf2eb;
+  --decoration: #a68b5b;
+  --border: #d8ded7;
+  font-family: system-ui, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--background);
+}
+
+body {
+  max-inline-size: 48rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.25em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.15em;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  inset-block-start: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--background);
+}
+
+.skip-link:not(:focus) {
+  clip-path: inset(50%);
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+}
+
+.site-header,
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+
+.site-header {
+  justify-content: space-between;
+  padding-block: 1.5rem;
+  border-block-end: 1px solid var(--border);
+}
+
+.site-name {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav a {
+  display: inline-block;
+  padding-block: 0.5rem;
+}
+
+section {
+  padding-block: 2rem;
+}
+
+.intro {
+  padding-block: 4rem 3rem;
+}
+
+.eyebrow,
+.project-meta,
+.site-footer {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+  line-height: 1.4;
+  color: var(--accent);
+  margin-block: 0.5rem 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-block: 0 1rem;
+  border-inline-start: 3px solid var(--decoration);
+  padding-inline-start: 0.75rem;
+}
+
+p {
+  margin-block: 0 1rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+}
+
+.intro-link {
+  display: inline-block;
+  margin-block-start: 0.5rem;
+  padding-block: 0.5rem;
+}
+
+.category-title {
+  margin-block: 2rem 1rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.project-list {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.project {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+}
+
+.project h3,
+.project h4 {
+  margin-block: 0 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.project p:last-child {
+  margin-block-end: 0;
+}
+
+.more-link {
+  margin-block-start: 1.5rem;
+}
+
+ul {
+  padding-inline-start: 1.25rem;
+}
+
+.site-footer {
+  margin-block-start: 2rem;
+  padding-block: 1.5rem;
+  border-block-start: 1px solid var(--border);
+}
